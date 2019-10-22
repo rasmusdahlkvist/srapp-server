@@ -6,4 +6,4 @@
 3. npm start
 
 ##
-Should run dev server on 4000
+Should run dev server on port 4000
