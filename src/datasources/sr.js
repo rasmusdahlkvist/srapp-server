@@ -21,7 +21,6 @@ class SrAPI extends RESTDataSource {
     return this.srReducer(channel.channel);
   }
   async getSchedule(id) {
-    console.log(id);
     const res = await Promise.all([
       ...id.map(channel =>
         this.get(
@@ -39,7 +38,6 @@ class SrAPI extends RESTDataSource {
     return res;
   }
   scheduleReducer(schedule) {
-    console.log(schedule);
     return {
       episodeid: schedule.channel.currentscheduledepisode.episodeid,
       title: schedule.channel.currentscheduledepisode.title,
